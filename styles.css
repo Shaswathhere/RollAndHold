@@ -1,0 +1,84 @@
+*{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('./bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#player1{
+    display: flex;
+    justify-content: center;
+    color: white;
+    position: relative;
+    top: 120px;
+
+    
+}
+
+#player2{
+    display: flex;
+    justify-content: center;
+    color: white;
+    position: relative;
+    top: 170px;
+}
+
+#maxscore{
+    display: flex;
+    justify-content: center;
+    color: white;
+    position: relative;
+    top: 220px;
+}
+
+.rules{
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px;
+    cursor: pointer;
+}
+
+h2,input{
+    padding: 10px;
+}
+
+input{
+    height: 5px;
+    position: relative;
+    top: 10px;
+    color: white;
+    background-color: black;
+    
+}
+
+#start{
+    color: white;
+    background-color: black;
+    height: 50px;
+    width: 128px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#startbutton{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 250px;
+    cursor: pointer;
+}
+
+#start:hover{
+    background-color: white;
+    color: black;
+    font-size: 24px;
+}
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rules.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <button id="backbutton">
+            Back
+        </button>
+    </header>
+    
+    <p>
+        Rules :
+    </p>
+
+    <ol><li>1) This game consist of 2 players . Player takes turn to roll the dice . On their turn they can roll the die as many times they want in a single turn .</li>
+        <br>
+        <li>2) Once the player decides to hold , the turn for the player is over and the turn’s points will become the overall score . Then the other player continues the same .</li>
+        <br>
+        <li>3) If the player rolls a same numbers in the dice their overall score will become 0 and they will lose their turn .</li>
+        <br>
+        <li>4) Before the start of the game players can set the maximum score and the first player to obtain the maximum score wins</li> 
+    </ol>
+      
+</body>
+</html>
+<script>
+    var back = document.getElementById('backbutton')
+    back.onclick = () => {
+        location.href = './index.html'
+    }
+</script>

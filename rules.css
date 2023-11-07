@@ -1,0 +1,41 @@
+*{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: white;
+    overflow-y: hidden;
+}
+
+body{
+    background-image: url('./rulesbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+ol{
+    width: 600px;
+    position: relative;
+    left: 350px;
+    bottom: 30px;
+}
+
+p{
+    margin-left: 300px;
+    position: relative;
+    bottom: 5px;
+}
+
+#backbutton{
+    background-color: black;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+#backbutton:hover{
+    background-color: white;
+    color: black;
+    font-size: 24px;
+}
