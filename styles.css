@@ -16,7 +16,7 @@ body{
     justify-content: center;
     color: white;
     position: relative;
-    top: 120px;
+    top: 15vh;
 
     
 }
@@ -26,7 +26,7 @@ body{
     justify-content: center;
     color: white;
     position: relative;
-    top: 170px;
+    top: 20vh;
 }
 
 #maxscore{
@@ -34,24 +34,24 @@ body{
     justify-content: center;
     color: white;
     position: relative;
-    top: 220px;
+    top: 25vh;
 }
 
 .rules{
     display: flex;
     justify-content: flex-end;
-    margin: 40px;
+    margin: 7vh;
     cursor: pointer;
 }
 
 h2,input{
-    padding: 10px;
+    padding: 2vh;
 }
 
 input{
-    height: 5px;
+    height: 1vh;
     position: relative;
-    top: 10px;
+    top: 1vh;
     color: white;
     background-color: black;
     
@@ -60,9 +60,9 @@ input{
 #start{
     color: white;
     background-color: black;
-    height: 50px;
-    width: 128px;
-    font-size: 20px;
+    height: 6vh;
+    width: 10vw;
+    font-size: 3vh;
     cursor: pointer;
 }
 
@@ -70,14 +70,36 @@ input{
     display: flex;
     justify-content: center;
     position: relative;
-    top: 250px;
+    top: 30vh;
     cursor: pointer;
 }
 
 #start:hover{
     background-color: white;
     color: black;
-    font-size: 24px;
+    font-size: 4vh;
+    
+}
+
+@media (max-width: 800px) {
+    *{
+        font-size: 1.9vh;
+    }
+    body {
+        background-image: url('./mobilebg1.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100vh;
+    }
+    #start{
+        width: auto;
+        height: auto;
+    }
+    #rule-book{
+        position: relative;
+        bottom: 5vh;
+        left: 3vh;
+    }
+
 }
 
 

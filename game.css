@@ -5,9 +5,11 @@
 }
 
 body{
-    background-image: url('./rulesbg.png');
+    background-image: url('./bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    overflow: hidden;
     
 }
 
@@ -15,98 +17,202 @@ body{
     display: flex;
     justify-content: space-evenly;
     position: relative;
-    top: 150px;
+    top: 25vh;
 }
 
 .player1,.player2{
     background-color: white;
-    height: 350px; width: 350px;
+    height: 50vh; width: 50vh;
+}
+
+.player1{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 23vh;
+}
+
+.player2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 23vh;
+}
+
+.player1 div{
+    margin: 3vh; /* Adjust the value to control the spacing */
+}
+
+.player2 div{
+    margin: 3vh; /* Adjust the value to control the spacing */
 }
 
 #name1{
     color: black;
-    font-size: 35px;
-    text-align: center;
+    font-size: 6vh;
+    
 }
 
 #name2{
     color: black;
-    font-size: 35px;
-    text-align: center;
+    font-size: 6vh;
+    
 }
 
 #total-score1{
     color: black;
-    font-size: 40px;
-    text-align: center;
-    margin-top: 90px;
+    font-size: 6vh;
+    
+    
 }
 
 #total-score2{
     color: black;
-    font-size: 40px;
-    text-align: center;
-    margin-top: 90px;
+    font-size: 6vh;
 }
 
 #currentdiv1{
-    text-align: center;
-    height: 125px;
-    width: 160px;
-    font-size: 30px;
-    position: relative;
-    left: 100px;
-    top: 50px;
+    
+    height: 18vh;
+    width: 21.5vh;
+    font-size: 4vh;
+    
     background-color: gray;
 }
 
-#current-score1,#current-score2{
-    text-align: center;
-    padding: 30px;
+#first-dice-img{
+    position: relative;
+    bottom: 150px;
+}
+#second-dice-img{
+    position: relative;
+    bottom: 150px;
 }
 
-.current{
-    text-align: center;
-    position: relative;
-    top: 10px;
-}
+
 
 #currentdiv2{
-    text-align: center;
-    height: 125px;
-    width: 160px;
-    font-size: 30px;
-    position: relative;
-    left: 100px;
-    top: 50px;
+    
+    height: 18vh;
+    width: 21.5vh;
+    font-size: 4vh;
+    
     background-color: gray;
 }
 
 #second-dice-img{
-    padding-top: 50px;
+    padding-top: 5vh;
 }
 
 #roll,#hold{
     color: black;
     background-color: white;
-    height: 50px;
-    width: 128px;
-    font-size: 20px;
+    height: 7vh;
+    width: 20vh;
+    font-size: 4vh;
     cursor: pointer;
 }
 
 .buttons{
-    width: 500px;
+    width: 80vh;
     display: flex;
     justify-content: space-around;
     position: relative;
-    left: 400px;
-    top: 210px;
+    left: 55vh;
+    top: 5vh;
 }
 
 #roll:hover,#hold:hover{
     color: black;
     background-color: gray;
-    font-size: 24px;
+    font-size: 4.5vh;
 
+}
+#logo{
+    visibility: hidden;
+}
+#play-again{
+    color: black;
+    background-color: white;
+    height: 7vh;
+    width: 20vh;
+    font-size: 3vh;
+    cursor: pointer;
+    position: relative;
+    bottom: 350px;
+    visibility: hidden;
+}
+#play-again:hover{
+    color: black;
+    background-color: gray;
+    font-size: 4vh;
+    height: 10vh;
+    width: 25vh;
+    
+}
+
+@media(max-width: 725px){
+    *{
+        font-size: 3vh;
+    }
+    body {
+        background-image: none;
+        background-color: black;
+        
+    }
+    #gameplay{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #currentdiv1,#currentdiv2{
+        
+        position: relative;
+        bottom: 40px;
+        height: 15vh;
+    }
+    .player1,.player2{
+        
+        height: 40vh;
+        width: 30vh;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        
+    }
+    #roll,#hold{
+        margin: 20px;
+        position: relative;
+        right: 660px;
+        bottom: 480px;
+    }
+    #logo{
+        visibility: visible;
+        height: 20vh;
+        width: 100vw;
+    }
+    .player2{
+        position: relative;
+        top: 50px;
+    }
+    .player1{
+        position: relative;
+        bottom: 100px;
+    }
+    #second-dice-img{
+        position: relative;
+        top: 20px;
+    }
+    #first-dice-img{
+        position: relative;
+        bottom: 70px;
+    }
+    
 }
