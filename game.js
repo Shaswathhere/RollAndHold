@@ -1,3 +1,20 @@
+var rules = document.getElementById('rules');
+var rulesPage = document.getElementById('rules-page');
+rules.addEventListener('mouseenter', function() {
+    rulesPage.style.visibility = 'visible';
+    player1Div.style.opacity = '0';
+    player2Div.style.opacity = '0';
+});
+
+rules.addEventListener('mouseleave', function() {
+    rulesPage.style.visibility = 'hidden';
+    player1Div.style.opacity = '1';
+    player2Div.style.opacity = '1';
+});
+
+
+
+
 var player1Name = localStorage.getItem('input1');
 var player2Name = localStorage.getItem('input2');
 var maximumNumber = localStorage.getItem('input3');
@@ -34,23 +51,23 @@ name1.innerHTML = `<div id="name1"><b>${player1Name}</b></div>`;
 name2.innerHTML = `<div id="name2"><b>${player2Name}</b></div>`;
 
 
-const rollSound = new Audio('./071950_dice-rolling-88974.mp3'); // Replace 'roll-sound.mp3' with the path to your audio file
+const rollSound = new Audio('./071950_dice-rolling-88974.mp3');
 
-// Optionally, set attributes such as autoplay and preload
-rollSound.autoplay = false; // Set to true if you want it to automatically play
-rollSound.preload = 'auto'; // Preload the audio for smoother playback
 
-const holdSound = new Audio('./button-124476.mp3'); // Replace 'roll-sound.mp3' with the path to your audio file
+rollSound.autoplay = false; 
+rollSound.preload = 'auto'; 
 
-// Optionally, set attributes such as autoplay and preload
-holdSound.autoplay = false; // Set to true if you want it to automatically play
-holdSound.preload = 'auto'; // Preload the audio for smoother playback
+const holdSound = new Audio('./button-124476.mp3');
 
-const winningSound = new Audio('./SCNB3LA-winning (mp3cut.net).mp3'); // Replace 'roll-sound.mp3' with the path to your audio file
 
-// Optionally, set attributes such as autoplay and preload
-winningSound.autoplay = false; // Set to true if you want it to automatically play
-winningSound.preload = 'auto'; // Preload the audio for smoother playback
+holdSound.autoplay = false; 
+holdSound.preload = 'auto'; 
+
+const winningSound = new Audio('./SCNB3LA-winning (mp3cut.net).mp3');
+
+
+winningSound.autoplay = false; 
+winningSound.preload = 'auto'; 
 
 
 
@@ -82,15 +99,13 @@ const changeRoles = () => {
         player1Div.classList.remove('active');
         currentScore1.textContent = 0;
     }
-    // Die1.style.visibility = 'hidden';
-    // Die2.style.visibility = 'hidden';
+    
 };
 
 Roll.addEventListener('click', () => {
     if (isGamePlaying) {
         var randomNum = rollDice();
-        // if (randomNum % 2 === 0)
-        if(randomNum == 12) {
+        if (randomNum % 2 === 0) {
             currentScore1.textContent = 0
             currentScore2.textContent = 0
             currentScoreSum = 0
@@ -147,7 +162,6 @@ Hold.addEventListener('click', () => {
             playAgain.addEventListener('click',() => {
                 holdSound.play()
                 location.href = './index.html'
-                // window.location.reload()
             })
             isGamePlaying = false;
         } else {
