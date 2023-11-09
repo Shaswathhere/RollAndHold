@@ -18,15 +18,15 @@
     <!-- Players information and maximum score -->
 
     <div id="player1">
-        <h2>Player 1 Name : </h2>
+        <h2>PLAYER 1 NAME  : </h2>
         <input id="player-name-1" type="text">
     </div>
     <div id="player2">
-        <h2>Player 2 Name : </h2>
+        <h2>PLAYER 2 NAME : </h2>
         <input id="player-name-2" type="text">
     </div>
     <div id="maxscore">
-        <h2>Maximum Score : </h2>
+        <h2>MAXIMUM SCORE : </h2>
         <input id="maxscore-input" type="text" placeholder="Minimum 100" >
     </div>
 
@@ -38,39 +38,5 @@
 
 </body>
 </html>
-<script>
-    var start = document.getElementById('start')
-    var rules = document.getElementById('rule-book')
-
-    start.onclick = () => {
-        var input1 = document.getElementById('player-name-1').value
-        var input2 = document.getElementById('player-name-2').value
-        var input3 = document.getElementById('maxscore-input').value
-        var max = parseInt(input3)
-
-
-        if(input1 === ""){
-            alert('Please enter player 1 name')
-        }
-        else if(input2 === ""){
-            alert('Please enter player 2 name')
-        }
-        else if(max < 100 || isNaN(max)){
-            alert('Please enter valid maximum number')
-        }
-        else{
-            localStorage.setItem('input1',input1)
-            localStorage.setItem('input2',input2)
-            localStorage.setItem('input3',input3)
-            location.href = './game.html'
-        }
-    }
-
-
-    rules.onclick = () => {
-        location.href = './rules.html'
-    }
-
-
-</script>
+<script src="./index.js"></script>
 

@@ -1,7 +1,3 @@
-
-
-
-
 var player1Name = localStorage.getItem('input1');
 var player2Name = localStorage.getItem('input2');
 var maximumNumber = localStorage.getItem('input3');
@@ -37,6 +33,29 @@ Die2.style.visibility = 'hidden';
 name1.innerHTML = `<div id="name1"><b>${player1Name}</b></div>`;
 name2.innerHTML = `<div id="name2"><b>${player2Name}</b></div>`;
 
+
+const rollSound = new Audio('./071950_dice-rolling-88974.mp3'); // Replace 'roll-sound.mp3' with the path to your audio file
+
+// Optionally, set attributes such as autoplay and preload
+rollSound.autoplay = false; // Set to true if you want it to automatically play
+rollSound.preload = 'auto'; // Preload the audio for smoother playback
+
+const holdSound = new Audio('./button-124476.mp3'); // Replace 'roll-sound.mp3' with the path to your audio file
+
+// Optionally, set attributes such as autoplay and preload
+holdSound.autoplay = false; // Set to true if you want it to automatically play
+holdSound.preload = 'auto'; // Preload the audio for smoother playback
+
+const winningSound = new Audio('./SCNB3LA-winning (mp3cut.net).mp3'); // Replace 'roll-sound.mp3' with the path to your audio file
+
+// Optionally, set attributes such as autoplay and preload
+winningSound.autoplay = false; // Set to true if you want it to automatically play
+winningSound.preload = 'auto'; // Preload the audio for smoother playback
+
+
+
+
+
 const rollDice = () => {
     var randomNum1 = Math.floor(Math.random() * 6) + 1;
     var randomNum2 = Math.floor(Math.random() * 6) + 1;
@@ -47,6 +66,7 @@ const rollDice = () => {
     Die2.style.visibility = 'visible';
     Die1.src = `./dice${randomNum1}.jpg`;
     Die2.src = `./dice${randomNum2}.jpg`;
+    rollSound.play()
     return randomNum;
 };
 
@@ -69,7 +89,8 @@ const changeRoles = () => {
 Roll.addEventListener('click', () => {
     if (isGamePlaying) {
         var randomNum = rollDice();
-        if (randomNum === 12) {
+        // if (randomNum % 2 === 0)
+        if(randomNum == 12) {
             currentScore1.textContent = 0
             currentScore2.textContent = 0
             currentScoreSum = 0
@@ -94,6 +115,7 @@ var input3 = parseInt(maximumNumber);
 var playAgain = document.getElementById('play-again')
 
 Hold.addEventListener('click', () => {
+    holdSound.play()
     currentScore1.textContent = 0;
     currentScore2.textContent = 0;
     if (isGamePlaying) {
@@ -111,7 +133,8 @@ Hold.addEventListener('click', () => {
 
             const winnerElement = document.querySelector('#name' + (activePlayer + 1));
             
-            winnerElement.textContent = winnerName + ' Won the Challenge !';
+            winnerElement.textContent = winnerName + ' Won the Challenge!';
+            winningSound.play()
             winnerElement.style.fontWeight = 'bold';
             winnerElement.style.fontSize = '26px'
             player1Div.style.height = '372px'
@@ -122,8 +145,9 @@ Hold.addEventListener('click', () => {
             Die2.style.visibility = 'hidden';
             playAgain.style.visibility = 'visible'
             playAgain.addEventListener('click',() => {
-                // location.href = './index.html'
-                window.location.reload()
+                holdSound.play()
+                location.href = './index.html'
+                // window.location.reload()
             })
             isGamePlaying = false;
         } else {
