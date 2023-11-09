@@ -1,13 +1,13 @@
 var start = document.getElementById('start')
 var rules = document.getElementById('rule-book')
 
-const startSound = new Audio('./interface-124464.mp3'); // Replace 'roll-sound.mp3' with the path to your audio file
+const startSound = new Audio('./assets/interface-124464.mp3'); // Replace 'roll-sound.mp3' with the path to your audio file
 
 // Optionally, set attributes such as autoplay and preload
 startSound.autoplay = "true" // Set to true if you want it to automatically play
 startSound.preload = 'auto'; // Preload the audio for smoother playback
 
-const accessDenied = new Audio('./error-126627.mp3')
+const accessDenied = new Audio('./assets/error-126627.mp3')
 accessDenied.preload = 'auto'
 start.onclick = () => {
     

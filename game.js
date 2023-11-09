@@ -51,19 +51,19 @@ name1.innerHTML = `<div id="name1"><b>${player1Name}</b></div>`;
 name2.innerHTML = `<div id="name2"><b>${player2Name}</b></div>`;
 
 
-const rollSound = new Audio('./071950_dice-rolling-88974.mp3');
+const rollSound = new Audio('./assets/071950_dice-rolling-88974.mp3');
 
 
 rollSound.autoplay = false; 
 rollSound.preload = 'auto'; 
 
-const holdSound = new Audio('./button-124476.mp3');
+const holdSound = new Audio('./assets/button-124476.mp3');
 
 
 holdSound.autoplay = false; 
 holdSound.preload = 'auto'; 
 
-const winningSound = new Audio('./SCNB3LA-winning (mp3cut.net).mp3');
+const winningSound = new Audio('./assets/SCNB3LA-winning (mp3cut.net).mp3');
 
 
 winningSound.autoplay = false; 
@@ -81,8 +81,8 @@ const rollDice = () => {
     var randomNum = randomNum1 + randomNum2;
     Die1.style.visibility = 'visible';
     Die2.style.visibility = 'visible';
-    Die1.src = `./dice${randomNum1}.jpg`;
-    Die2.src = `./dice${randomNum2}.jpg`;
+    Die1.src = `./assets/dice${randomNum1}.jpg`;
+    Die2.src = `./assets/dice${randomNum2}.jpg`;
     rollSound.play()
     return randomNum;
 };

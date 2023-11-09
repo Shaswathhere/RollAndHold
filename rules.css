@@ -7,7 +7,7 @@
 }
 
 body{
-    background-image: url('./rulesbg.png');
+    background-image: url('./assets/rulesbg.png');
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -41,7 +41,7 @@ p{
         font-size: 2vh;
     }
     body {
-        background-image: url('./rulesbg.png');
+        background-image: url('./assets/rulesbg.png');
         background-repeat: no-repeat;
         background-size: 100% 100vh;
     }
