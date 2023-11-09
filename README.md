@@ -9,7 +9,9 @@ Rules :
 4. Before the start of the game players can set the maximum score and the first player to obtain the maximum score wins . 
 
 Figma : https://www.figma.com/file/ThI5NNaRnbjX4Zd76rNtzV/Untitled?type=design&node-id=0%3A1&mode=design&t=ZV7GpYlXqmEYjKdw-1
-Deployed Link : 
+
+Deployed Link : https://shaswathhere.github.io/RollAndHold/
+
 PPT : https://docs.google.com/presentation/d/1WbEvXcL5-mNToR7yZz_jcT6F8IBB00_O-KycI5c73es/edit?usp=sharing
 
 
