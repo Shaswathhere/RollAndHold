@@ -4,16 +4,16 @@ rules.addEventListener('mouseenter', function() {
     rulesPage.style.visibility = 'visible';
     player1Div.style.opacity = '0';
     player2Div.style.opacity = '0';
-    Die1.style.opacity = '0';
-    Die2.style.opacity = '0';
+    Die1.style.opacity = '0'
+    Die2.style.opacity = '0'
 });
 
 rules.addEventListener('mouseleave', function() {
     rulesPage.style.visibility = 'hidden';
     player1Div.style.opacity = '1';
     player2Div.style.opacity = '1';
-    Die1.style.opacity = '1';
-    Die2.style.opacity = '1';
+    Die1.style.opacity = '1'
+    Die2.style.opacity = '1'
 });
 
 
@@ -125,15 +125,13 @@ Roll.addEventListener('click', () => {
     }
 });
 
-
+var scores = [0, 0];
 var globalScore1 = document.getElementById('total-score1');
 var globalScore2 = document.getElementById('total-score2');
-var playAgain = document.getElementById('play-again')
 globalScore1.textContent = 0
 globalScore2.textContent = 0
-
 var input3 = parseInt(maximumNumber);
-
+var playAgain = document.getElementById('play-again')
 
 Hold.addEventListener('click', () => {
     holdSound.play()
