@@ -125,13 +125,15 @@ Roll.addEventListener('click', () => {
     }
 });
 
-var scores = [0, 0];
+
 var globalScore1 = document.getElementById('total-score1');
 var globalScore2 = document.getElementById('total-score2');
+var playAgain = document.getElementById('play-again')
 globalScore1.textContent = 0
 globalScore2.textContent = 0
+
 var input3 = parseInt(maximumNumber);
-var playAgain = document.getElementById('play-again')
+
 
 Hold.addEventListener('click', () => {
     holdSound.play()
