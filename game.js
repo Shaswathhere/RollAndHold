@@ -4,12 +4,16 @@ rules.addEventListener('mouseenter', function() {
     rulesPage.style.visibility = 'visible';
     player1Div.style.opacity = '0';
     player2Div.style.opacity = '0';
+    Die1.style.opacity = '0';
+    Die2.style.opacity = '0';
 });
 
 rules.addEventListener('mouseleave', function() {
     rulesPage.style.visibility = 'hidden';
     player1Div.style.opacity = '1';
     player2Div.style.opacity = '1';
+    Die1.style.opacity = '1';
+    Die2.style.opacity = '1';
 });
 
 
